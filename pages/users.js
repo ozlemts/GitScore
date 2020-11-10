@@ -11,8 +11,9 @@ export default function Users({ users }) {
 			<p className="text-3xl p-4">Users</p>
 			{users.map((user) => (
 					<div className="p-4">
-						<p className="text-xl font-bold">{user.name}</p>
-						<p className="text-xs">{user.details.summary}</p>
+						<a href={'/user/' + user.id}>
+							<p className="text-xl font-bold">{user.id} - {user.name}</p>
+						</a>
 					</div>
 				))}
 		</div>
